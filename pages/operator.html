@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Logika - Logika Informatika</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-brain"></i> Materi Logika Informatika</h1>
+            <p>Website pembelajaran dasar-dasar logika dalam ilmu komputer</p>
+        </div>
+    </header>
+    
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="pengenalan.html"><i class="fas fa-book"></i> Pengenalan</a></li>
+                <li><a href="proposisi.html"><i class="fas fa-question"></i> Proposisi</a></li>
+                <li><a href="operator.html" class="active"><i class="fas fa-calculator"></i> Operator Logika</a></li>
+                <li><a href="tabel-kebenaran.html"><i class="fas fa-table"></i> Tabel Kebenaran</a></li>
+                <li><a href="penerapan.html"><i class="fas fa-laptop-code"></i> Penerapan</a></li>
+                <li><a href="latihan.html"><i class="fas fa-pencil-alt"></i> Latihan</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="content-header">
+            <h2><i class="fas fa-calculator"></i> Operator Logika</h2>
+            <p>Mengenal operator-operator dasar dalam logika boolean</p>
+        </div>
+        
+        <div class="content-body">
+            <h3>Apa itu Operator Logika?</h3>
+            <p>Operator logika digunakan untuk membentuk proposisi majemuk dari satu atau lebih proposisi sederhana. Operator ini mengkombinasikan nilai kebenaran dari proposisi-proposisi untuk menghasilkan nilai kebenaran baru.</p>
+            
+            <h3>Operator Logika Dasar</h3>
+            
+            <div class="example-box">
+                <h4>1. Negasi (NOT) - <span class="operator">¬</span> atau <span class="operator">~</span></h4>
+                <p><strong>Fungsi:</strong> Membalik nilai kebenaran suatu proposisi</p>
+                <p><strong>Contoh:</strong> Jika P = "Hari ini hujan" (True), maka ¬P = "Hari ini tidak hujan" (False)</p>
+                <p><strong>Dalam pemrograman:</strong> <code>!</code> (JavaScript), <code>not</code> (Python)</p>
+            </div>
+            
+            <div class="example-box">
+                <h4>2. Konjungsi (AND) - <span class="operator">∧</span></h4>
+                <p><strong>Fungsi:</strong> Menghasilkan nilai benar hanya jika kedua proposisi benar</p>
+                <p><strong>Contoh:</strong> P = "Hari ini hujan" (True), Q = "Saya punya payung" (True), maka P ∧ Q = True</p>
+                <p><strong>Dalam pemrograman:</strong> <code>&&</code> (JavaScript), <code>and</code> (Python)</p>
+            </div>
+            
+            <div class="example-box">
+                <h4>3. Disjungsi (OR) - <span class="operator">∨</span></h4>
+                <p><strong>Fungsi:</strong> Menghasilkan nilai benar jika setidaknya satu proposisi benar</p>
+                <p><strong>Contoh:</strong> P = "Hari ini hujan" (True), Q = "Saya punya payung" (False), maka P ∨ Q = True</p>
+                <p><strong>Dalam pemrograman:</strong> <code>||</code> (JavaScript), <code>or</code> (Python)</p>
+            </div>
+            
+            <div class="example-box">
+                <h4>4. Implikasi (Jika-Maka) - <span class="operator">→</span></h4>
+                <p><strong>Fungsi:</strong> Menghubungkan dua proposisi dalam bentuk "jika P maka Q"</p>
+                <p><strong>Contoh:</strong> P = "Hari ini hujan" (True), Q = "Jalanan basah" (True), maka P → Q = True</p>
+                <p><strong>Catatan:</strong> P → Q bernilai salah hanya jika P benar dan Q salah</p>
+            </div>
+            
+            <div class="example-box">
+                <h4>5. Biimplikasi (Jika dan Hanya Jika) - <span class="operator">↔</span></h4>
+                <p><strong>Fungsi:</strong> Menghasilkan nilai benar jika kedua proposisi memiliki nilai kebenaran yang sama</p>
+                <p><strong>Contoh:</strong> P = "2 + 2 = 4" (True), Q = "4 - 2 = 2" (True), maka P ↔ Q = True</p>
+            </div>
+            
+            <h3>Tabel Operator Logika</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Simbol</th>
+                        <th>Nama Lain</th>
+                        <th>Contoh</th>
+                        <th>Hasil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Negasi</td>
+                        <td>¬, ~, !</td>
+                        <td>NOT, Bukan</td>
+                        <td>¬P</td>
+                        <td>Kebalikan dari P</td>
+                    </tr>
+                    <tr>
+                        <td>Konjungsi</td>
+                        <td>∧, &, ·</td>
+                        <td>AND, Dan</td>
+                        <td>P ∧ Q</td>
+                        <td>True jika P dan Q True</td>
+                    </tr>
+                    <tr>
+                        <td>Disjungsi</td>
+                        <td>∨, |, +</td>
+                        <td>OR, Atau</td>
+                        <td>P ∨ Q</td>
+                        <td>True jika P atau Q True</td>
+                    </tr>
+                    <tr>
+                        <td>Implikasi</td>
+                        <td>→, ⇒, ⊃</td>
+                        <td>Jika-Maka</td>
+                        <td>P → Q</td>
+                        <td>False hanya jika P True dan Q False</td>
+                    </tr>
+                    <tr>
+                        <td>Biimplikasi</td>
+                        <td>↔, ⇔, ≡</td>
+                        <td>Jika dan hanya jika</td>
+                        <td>P ↔ Q</td>
+                        <td>True jika P dan Q sama</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Prioritas Operator</h3>
+            <p>Urutan evaluasi operator logika (dari prioritas tertinggi ke terendah):</p>
+            <ol>
+                <li>Negasi (¬)</li>
+                <li>Konjungsi (∧)</li>
+                <li>Disjungsi (∨)</li>
+                <li>Implikasi (→)</li>
+                <li>Biimplikasi (↔)</li>
+            </ol>
+            
+            <div class="example-box">
+                <h4>Contoh Evaluasi Ekspresi:</h4>
+                <p>Ekspresi: <strong>¬P ∧ Q ∨ R → S</strong></p>
+                <p>Dievaluasi sebagai: <strong>(((¬P) ∧ Q) ∨ R) → S</strong></p>
+                <p>Langkah-langkah:
+                <ol>
+                    <li>Hitung ¬P</li>
+                    <li>Hitung (¬P) ∧ Q</li>
+                    <li>Hitung ((¬P) ∧ Q) ∨ R</li>
+                    <li>Hitung (((¬P) ∧ Q) ∨ R) → S</li>
+                </ol>
+                </p>
+            </div>
+            
+            <h3>Contoh Penggunaan dalam Ekspresi</h3>
+            <div class="code-block">
+                <p><strong>Misalkan:</strong><br>
+                P = "Hari ini hujan" (True)<br>
+                Q = "Saya membawa payung" (False)<br>
+                R = "Saya akan basah" (True)<br><br>
+                
+                <strong>Ekspresi 1:</strong> P ∧ ¬Q → R<br>
+                = True ∧ ¬False → True<br>
+                = True ∧ True → True<br>
+                = True → True<br>
+                = <strong>True</strong><br><br>
+                
+                <strong>Ekspresi 2:</strong> (P ∨ Q) ∧ R<br>
+                = (True ∨ False) ∧ True<br>
+                = True ∧ True<br>
+                = <strong>True</strong><br><br>
+                
+                <strong>Ekspresi 3:</strong> P ↔ Q<br>
+                = True ↔ False<br>
+                = <strong>False</strong></p>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="proposisi.html" class="nav-btn prev">Proposisi</a>
+                <a href="tabel-kebenaran.html" class="nav-btn next">Tabel Kebenaran</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p><i class="fas fa-graduation-cap"></i> Website Materi Logika Informatika</p>
+                <p>© 2025 - Materi Operator Logika</p>
+                <div class="footer-links">
+                    <a href="../index.html">Beranda</a> | 
+                    <a href="operator.html">Operator Logika</a> | 
+                    <a href="latihan.html">Latihan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

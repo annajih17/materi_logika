@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Kebenaran - Logika Informatika</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-brain"></i> Materi Logika Informatika</h1>
+            <p>Website pembelajaran dasar-dasar logika dalam ilmu komputer</p>
+        </div>
+    </header>
+    
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="pengenalan.html"><i class="fas fa-book"></i> Pengenalan</a></li>
+                <li><a href="proposisi.html"><i class="fas fa-question"></i> Proposisi</a></li>
+                <li><a href="operator.html"><i class="fas fa-calculator"></i> Operator Logika</a></li>
+                <li><a href="tabel-kebenaran.html" class="active"><i class="fas fa-table"></i> Tabel Kebenaran</a></li>
+                <li><a href="penerapan.html"><i class="fas fa-laptop-code"></i> Penerapan</a></li>
+                <li><a href="latihan.html"><i class="fas fa-pencil-alt"></i> Latihan</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="content-header">
+            <h2><i class="fas fa-table"></i> Tabel Kebenaran</h2>
+            <p>Memahami cara membuat dan membaca tabel kebenaran untuk ekspresi logika</p>
+        </div>
+        
+        <div class="content-body">
+            <h3>Apa itu Tabel Kebenaran?</h3>
+            <p>Tabel kebenaran adalah tabel yang menunjukkan nilai kebenaran dari suatu proposisi majemuk untuk setiap kombinasi nilai kebenaran dari proposisi penyusunnya. Tabel ini membantu kita menganalisis perilaku ekspresi logika.</p>
+            
+            <h3>Tabel Kebenaran Operator Dasar</h3>
+            
+            <h4>Tabel Kebenaran untuk Satu Variabel</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>P</th>
+                        <th>¬P</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>True</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <td>False</td>
+                        <td>True</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h4>Tabel Kebenaran untuk Dua Variabel</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>P</th>
+                        <th>Q</th>
+                        <th>P ∧ Q</th>
+                        <th>P ∨ Q</th>
+                        <th>P → Q</th>
+                        <th>P ↔ Q</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>True</td>
+                        <td>True</td>
+                        <td>True</td>
+                        <td>True</td>
+                        <td>True</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td>True</td>
+                        <td>False</td>
+                        <td>False</td>
+                        <td>True</td>
+                        <td>False</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <td>False</td>
+                        <td>True</td>
+                        <td>False</td>
+                        <td>True</td>
+                        <td>True</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <td>False</td>
+                        <td>False</td>
+                        <td>False</td>
+                        <td>False</td>
+                        <td>True</td>
+                        <td>True</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Cara Membuat Tabel Kebenaran</h3>
+            <p>Langkah-langkah membuat tabel kebenaran:</p>
+            <ol>
+                <li>Tentukan jumlah variabel proposisi (n)</li>
+                <li>Tentukan jumlah baris = 2<sup>n</sup></li>
+                <li>Tulis semua kombinasi nilai kebenaran untuk variabel</li>
+                <li>Tambahkan kolom untuk setiap sub-ekspresi</li>
+                <li>Hitung nilai kebenaran untuk setiap kolom</li>
+            </ol>
+            
+            <div class="example-box">
+                <h4>Contoh: Membuat Tabel Kebenaran untuk ¬(P ∧ Q)</h4>
+                <p><strong>Langkah 1:</strong> 2 variabel (P dan Q)</p>
+                <p><strong>Langkah 2:</strong> Jumlah baris = 2<sup>2</sup> = 4</p>
+                <p><strong>Langkah 3-5:</strong> Buat tabel:</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>P</th>
+                            <th>Q</th>
+                            <th>P ∧ Q</th>
+                            <th>¬(P ∧ Q)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>False</td>
+                        </tr>
+                        <tr>
+                            <td>True</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                        </tr>
+                        <tr>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td>True</td>
+                        </tr>
+                        <tr>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h3>Contoh Tabel Kebenaran Kompleks</h3>
+            
+            <div class="example-box">
+                <h4>Ekspresi: (P → Q) ∧ (Q → R)</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>P</th>
+                            <th>Q</th>
+                            <th>R</th>
+                            <th>P → Q</th>
+                            <th>Q → R</th>
+                            <th>(P → Q) ∧ (Q → R)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>True</td>
+                        </tr>
+                        <tr>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td>False</td>
+                        </tr>
+                        <tr>
+                            <td>True</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                        </tr>
+                        <tr>
+                            <td>True</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                        </tr>
+                        <tr>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>True</td>
+                        </tr>
+                        <tr>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>False</td>
+                            <td>False</td>
+                        </tr>
+                        <tr>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>True</td>
+                        </tr>
+                        <tr>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>True</td>
+                            <td>True</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h3>Konsep Penting dalam Tabel Kebenaran</h3>
+            
+            <div class="example-box">
+                <h4>1. Tautologi</h4>
+                <p>Ekspresi logika yang selalu bernilai benar untuk semua kombinasi nilai kebenaran.</p>
+                <p><strong>Contoh:</strong> P ∨ ¬P (Hukum excluded middle)</p>
+            </div>
+            
+            <div class="example-box">
+                <h4>2. Kontradiksi</h4>
+                <p>Ekspresi logika yang selalu bernilai salah untuk semua kombinasi nilai kebenaran.</p>
+                <p><strong>Contoh:</strong> P ∧ ¬P (Hukum kontradiksi)</p>
+            </div>
+            
+            <div class="example-box">
+                <h4>3. Kontingensi</h4>
+                <p>Ekspresi logika yang bukan tautologi maupun kontradiksi (terkadang benar, terkadang salah).</p>
+                <p><strong>Contoh:</strong> P ∧ Q (bergantung nilai P dan Q)</p>
+            </div>
+            
+            <h3>Hukum-Hukum Logika dalam Tabel Kebenaran</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hukum</th>
+                        <th>Contoh</th>
+                        <th>Keterangan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Identitas</td>
+                        <td>P ∧ True ≡ P</td>
+                        <td>True adalah identitas untuk ∧</td>
+                    </tr>
+                    <tr>
+                        <td>Komutatif</td>
+                        <td>P ∧ Q ≡ Q ∧ P</td>
+                        <td>Urutan tidak penting</td>
+                    </tr>
+                    <tr>
+                        <td>Asosiatif</td>
+                        <td>(P ∧ Q) ∧ R ≡ P ∧ (Q ∧ R)</td>
+                        <td>Pengelompokan tidak penting</td>
+                    </tr>
+                    <tr>
+                        <td>Distributif</td>
+                        <td>P ∧ (Q ∨ R) ≡ (P ∧ Q) ∨ (P ∧ R)</td>
+                        <td>Sama seperti aljabar</td>
+                    </tr>
+                    <tr>
+                        <td>De Morgan</td>
+                        <td>¬(P ∧ Q) ≡ ¬P ∨ ¬Q</td>
+                        <td>Hukum penting untuk negasi</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="navigation-buttons">
+                <a href="operator.html" class="nav-btn prev">Operator Logika</a>
+                <a href="penerapan.html" class="nav-btn next">Penerapan</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p><i class="fas fa-graduation-cap"></i> Website Materi Logika Informatika</p>
+                <p>© 2025 - Materi Tabel Kebenaran</p>
+                <div class="footer-links">
+                    <a href="../index.html">Beranda</a> | 
+                    <a href="tabel-kebenaran.html">Tabel Kebenaran</a> | 
+                    <a href="latihan.html">Latihan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

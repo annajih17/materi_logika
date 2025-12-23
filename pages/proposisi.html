@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposisi - Logika Informatika</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-brain"></i> Materi Logika Informatika</h1>
+            <p>Website pembelajaran dasar-dasar logika dalam ilmu komputer</p>
+        </div>
+    </header>
+    
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="pengenalan.html"><i class="fas fa-book"></i> Pengenalan</a></li>
+                <li><a href="proposisi.html" class="active"><i class="fas fa-question"></i> Proposisi</a></li>
+                <li><a href="operator.html"><i class="fas fa-calculator"></i> Operator Logika</a></li>
+                <li><a href="tabel-kebenaran.html"><i class="fas fa-table"></i> Tabel Kebenaran</a></li>
+                <li><a href="penerapan.html"><i class="fas fa-laptop-code"></i> Penerapan</a></li>
+                <li><a href="latihan.html"><i class="fas fa-pencil-alt"></i> Latihan</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="content-header">
+            <h2><i class="fas fa-question"></i> Proposisi dalam Logika</h2>
+            <p>Memahami konsep proposisi dan pernyataan dalam logika informatika</p>
+        </div>
+        
+        <div class="content-body">
+            <h3>Apa itu Proposisi?</h3>
+            <p>Proposisi adalah pernyataan yang dapat dinilai benar (True) atau salah (False), tetapi tidak keduanya. Dalam logika informatika, proposisi sering dilambangkan dengan huruf seperti P, Q, R, dan sebagainya.</p>
+            
+            <div class="definition-box">
+                <p><strong>Proposisi</strong> adalah kalimat deklaratif yang memiliki nilai kebenaran yang jelas, yaitu benar (true) atau salah (false).</p>
+            </div>
+            
+            <h3>Karakteristik Proposisi</h3>
+            <ul>
+                <li>Harus berupa kalimat deklaratif (bukan pertanyaan atau perintah)</li>
+                <li>Harus memiliki nilai kebenaran yang pasti (true atau false)</li>
+                <li>Tidak boleh ambigu atau mengandung makna ganda</li>
+            </ul>
+            
+            <h3>Contoh Proposisi</h3>
+            <div class="example-box">
+                <h4>Proposisi Benar:</h4>
+                <p><strong>P:</strong> "2 + 2 = 4" (selalu benar)</p>
+                <p><strong>Q:</strong> "Bumi berbentuk bulat" (benar berdasarkan fakta ilmiah)</p>
+                <p><strong>R:</strong> "Java adalah bahasa pemrograman" (benar)</p>
+            </div>
+            
+            <div class="example-box">
+                <h4>Proposisi Salah:</h4>
+                <p><strong>S:</strong> "1 + 1 = 3" (selalu salah)</p>
+                <p><strong>T:</strong> "Bumi berbentuk datar" (salah berdasarkan fakta ilmiah)</p>
+            </div>
+            
+            <div class="example-box">
+                <h4>Contoh yang BUKAN Proposisi:</h4>
+                <p>"Apa kabar?" (pertanyaan, tidak bisa dinilai benar/salah)</p>
+                <p>"x + 5 = 10" (kalimat terbuka, tergantung nilai x)</p>
+                <p>"Semoga cepat sembuh" (harapan, tidak bisa dinilai benar/salah)</p>
+                <p>"Tolong buka jendela" (perintah, tidak bisa dinilai benar/salah)</p>
+            </div>
+            
+            <h3>Jenis-Jenis Proposisi</h3>
+            <p>Proposisi dapat dikategorikan menjadi:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Jenis Proposisi</th>
+                        <th>Penjelasan</th>
+                        <th>Contoh</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Proposisi Atomik</strong></td>
+                        <td>Proposisi sederhana yang tidak dapat dipecah lagi menjadi proposisi yang lebih kecil</td>
+                        <td>"Hari ini hujan"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Proposisi Majemuk</strong></td>
+                        <td>Proposisi yang terdiri dari beberapa proposisi atomik yang dihubungkan dengan operator logika</td>
+                        <td>"Hari ini hujan DAN saya membawa payung"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tautologi</strong></td>
+                        <td>Proposisi yang selalu bernilai benar untuk semua kemungkinan nilai kebenaran</td>
+                        <td>"P ∨ ¬P" (P ATAU tidak P)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kontradiksi</strong></td>
+                        <td>Proposisi yang selalu bernilai salah untuk semua kemungkinan nilai kebenaran</td>
+                        <td>"P ∧ ¬P" (P DAN tidak P)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Notasi dalam Logika</h3>
+            <p>Dalam logika formal, proposisi biasanya dilambangkan dengan huruf:</p>
+            <ul>
+                <li>Huruf kapital: P, Q, R, S, ... untuk proposisi atomik</li>
+                <li>Huruf kecil: p, q, r, s, ... untuk variabel proposisional</li>
+                <li>Nilai kebenaran: T (True/Benar) atau F (False/Salah)</li>
+            </ul>
+            
+            <div class="example-box">
+                <h4>Contoh Notasi:</h4>
+                <p>Misalkan:<br>
+                <strong>P</strong> = "Hari ini hujan"<br>
+                <strong>Q</strong> = "Saya membawa payung"<br>
+                <strong>R</strong> = "Saya akan basah"</p>
+                <p>Maka proposisi majemuk: <strong>P ∧ ¬Q → R</strong><br>
+                Artinya: "Jika hari ini hujan DAN saya tidak membawa payung, maka saya akan basah"</p>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="pengenalan.html" class="nav-btn prev">Pengenalan</a>
+                <a href="operator.html" class="nav-btn next">Operator Logika</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p><i class="fas fa-graduation-cap"></i> Website Materi Logika Informatika</p>
+                <p>© 2025 - Materi Proposisi dalam Logika</p>
+                <div class="footer-links">
+                    <a href="../index.html">Beranda</a> | 
+                    <a href="proposisi.html">Proposisi</a> | 
+                    <a href="latihan.html">Latihan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

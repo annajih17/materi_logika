@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Soal - Logika Informatika</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-brain"></i> Materi Logika Informatika</h1>
+            <p>Website pembelajaran dasar-dasar logika dalam ilmu komputer</p>
+        </div>
+    </header>
+    
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="pengenalan.html"><i class="fas fa-book"></i> Pengenalan</a></li>
+                <li><a href="proposisi.html"><i class="fas fa-question"></i> Proposisi</a></li>
+                <li><a href="operator.html"><i class="fas fa-calculator"></i> Operator Logika</a></li>
+                <li><a href="tabel-kebenaran.html"><i class="fas fa-table"></i> Tabel Kebenaran</a></li>
+                <li><a href="penerapan.html"><i class="fas fa-laptop-code"></i> Penerapan</a></li>
+                <li><a href="latihan.html" class="active"><i class="fas fa-pencil-alt"></i> Latihan</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="content-header">
+            <h2><i class="fas fa-pencil-alt"></i> Latihan Soal Logika Informatika</h2>
+            <p>Uji pemahaman Anda tentang materi logika informatika</p>
+        </div>
+        
+        <div class="content-body">
+            <h3>Instruksi:</h3>
+            <p>Coba selesaikan soal-soal berikut untuk menguji pemahaman Anda. Klik tombol "Tampilkan Jawaban" untuk melihat pembahasan.</p>
+            
+            <div class="exercise-item">
+                <h4>Soal 1: Identifikasi Proposisi</h4>
+                <p>Manakah dari kalimat berikut yang merupakan proposisi?</p>
+                <ol type="a">
+                    <li>2 + 2 = 5</li>
+                    <li>x + 3 = 10</li>
+                    <li>Apakah hari ini hujan?</li>
+                    <li>Semoga Anda sehat selalu</li>
+                    <li>Java adalah bahasa pemrograman</li>
+                </ol>
+                <button class="answer-btn" data-answer="answer1">Tampilkan Jawaban</button>
+                <div id="answer1" class="answer-content">
+                    <p><strong>Jawaban:</strong></p>
+                    <ol type="a">
+                        <li><strong>Proposisi</strong> - Dapat dinilai benar/salah (dalam hal ini salah)</li>
+                        <li><strong>Bukan proposisi</strong> - Kalimat terbuka, tergantung nilai x</li>
+                        <li><strong>Bukan proposisi</strong> - Pertanyaan, tidak bisa dinilai benar/salah</li>
+                        <li><strong>Bukan proposisi</strong> - Harapan, tidak bisa dinilai benar/salah</li>
+                        <li><strong>Proposisi</strong> - Dapat dinilai benar (memang benar)</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="exercise-item">
+                <h4>Soal 2: Nilai Kebenaran</h4>
+                <p>Diketahui: P = True, Q = False, R = True. Tentukan nilai kebenaran dari:</p>
+                <ol type="a">
+                    <li>P ∧ Q</li>
+                    <li>P ∨ Q</li>
+                    <li>¬P</li>
+                    <li>P → Q</li>
+                    <li>(P ∧ R) ∨ Q</li>
+                </ol>
+                <button class="answer-btn" data-answer="answer2">Tampilkan Jawaban</button>
+                <div id="answer2" class="answer-content">
+                    <p><strong>Jawaban:</strong></p>
+                    <ol type="a">
+                        <li>P ∧ Q = True ∧ False = <strong>False</strong></li>
+                        <li>P ∨ Q = True ∨ False = <strong>True</strong></li>
+                        <li>¬P = ¬True = <strong>False</strong></li>
+                        <li>P → Q = True → False = <strong>False</strong> (hanya salah jika P benar dan Q salah)</li>
+                        <li>(P ∧ R) ∨ Q = (True ∧ True) ∨ False = True ∨ False = <strong>True</strong></li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="exercise-item">
+                <h4>Soal 3: Tabel Kebenaran</h4>
+                <p>Buat tabel kebenaran untuk ekspresi: ¬(P ∧ Q) ↔ (¬P ∨ ¬Q)</p>
+                <button class="answer-btn" data-answer="answer3">Tampilkan Jawaban</button>
+                <div id="answer3" class="answer-content">
+                    <p><strong>Jawaban:</strong></p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>P</th>
+                                <th>Q</th>
+                                <th>P ∧ Q</th>
+                                <th>¬(P ∧ Q)</th>
+                                <th>¬P</th>
+                                <th>¬Q</th>
+                                <th>¬P ∨ ¬Q</th>
+                                <th>¬(P ∧ Q) ↔ (¬P ∨ ¬Q)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>T</td>
+                                <td>T</td>
+                                <td>T</td>
+                                <td>F</td>
+                                <td>F</td>
+                                <td>F</td>
+                                <td>F</td>
+                                <td>T</td>
+                            </tr>
+                            <tr>
+                                <td>T</td>
+                                <td>F</td>
+                                <td>F</td>
+                                <td>T</td>
+                                <td>F</td>
+                                <td>T</td>
+                                <td>T</td>
+                                <td>T</td>
+                            </tr>
+                            <tr>
+                                <td>F</td>
+                                <td>T</td>
+                                <td>F</td>
+                                <td>T</td>
+                                <td>T</td>
+                                <td>F</td>
+                                <td>T</td>
+                                <td>T</td>
+                            </tr>
+                            <tr>
+                                <td>F</td>
+                                <td>F</td>
+                                <td>F</td>
+                                <td>T</td>
+                                <td>T</td>
+                                <td>T</td>
+                                <td>T</td>
+                                <td>T</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Kesimpulan:</strong> Ekspresi ini adalah <strong>tautologi</strong> (selalu bernilai benar). Ini adalah salah satu hukum De Morgan.</p>
+                </div>
+            </div>
+            
+            <div class="exercise-item">
+                <h4>Soal 4: Penerapan dalam Kode</h4>
+                <p>Diberikan variabel boolean: <code>isMorning = true</code>, <code>isWeekend = false</code>, <code>hasCoffee = true</code>. Tentukan nilai dari:</p>
+                <ol type="a">
+                    <li><code>isMorning && !isWeekend</code></li>
+                    <li><code>(isMorning || isWeekend) && hasCoffee</code></li>
+                    <li><code>!isMorning || (isWeekend && hasCoffee)</code></li>
+                </ol>
+                <button class="answer-btn" data-answer="answer4">Tampilkan Jawaban</button>
+                <div id="answer4" class="answer-content">
+                    <p><strong>Jawaban:</strong></p>
+                    <ol type="a">
+                        <li><code>isMorning && !isWeekend</code> = <code>true && !false</code> = <code>true && true</code> = <strong>true</strong></li>
+                        <li><code>(isMorning || isWeekend) && hasCoffee</code> = <code>(true || false) && true</code> = <code>true && true</code> = <strong>true</strong></li>
+                        <li><code>!isMorning || (isWeekend && hasCoffee)</code> = <code>!true || (false && true)</code> = <code>false || false</code> = <strong>false</strong></li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="exercise-item">
+                <h4>Soal 5: Analisis Logika</h4>
+                <p>Jika diketahui pernyataan "Jika hari hujan, maka jalanan basah" bernilai benar, apa yang dapat disimpulkan jika:</p>
+                <ol type="a">
+                    <li>Hari hujan</li>
+                    <li>Jalanan tidak basah</li>
+                    <li>Hari tidak hujan</li>
+                    <li>Jalanan basah</li>
+                </ol>
+                <button class="answer-btn" data-answer="answer5">Tampilkan Jawaban</button>
+                <div id="answer5" class="answer-content">
+                    <p><strong>Jawaban:</strong> Misalkan P = "Hari hujan", Q = "Jalanan basah"</p>
+                    <p>Diketahui: P → Q = True</p>
+                    <ol type="a">
+                        <li>Jika P = True (hari hujan), maka Q harus = True (jalanan basah)</li>
+                        <li>Jika Q = False (jalanan tidak basah), maka P harus = False (hari tidak hujan)</li>
+                        <li>Jika P = False (hari tidak hujan), maka Q bisa True atau False (jalanan bisa basah atau tidak)</li>
+                        <li>Jika Q = True (jalanan basah), maka P bisa True atau False (bisa karena hujan atau sebab lain)</li>
+                    </ol>
+                    <p><strong>Catatan:</strong> Implikasi P → Q hanya salah jika P benar dan Q salah.</p>
+                </div>
+            </div>
+            
+            <div class="exercise-item">
+                <h4>Soal 6: Hukum Logika</h4>
+                <p>Buktikan dengan tabel kebenaran bahwa: <code>P → Q ≡ ¬P ∨ Q</code></p>
+                <button class="answer-btn" data-answer="answer6">Tampilkan Jawaban</button>
+                <div id="answer6" class="answer-content">
+                    <p><strong>Jawaban:</strong></p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>P</th>
+                                <th>Q</th>
+                                <th>P → Q</th>
+                                <th>¬P</th>
+                                <th>¬P ∨ Q</th>
+                                <th>P → Q ≡ ¬P ∨ Q</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>T</td>
+                                <td>T</td>
+                                <td>T</td>
+                                <td>F</td>
+                                <td>T</td>
+                                <td>T</td>
+                            </tr>
+                            <tr>
+                                <td>T</td>
+                                <td>F</td>
+                                <td>F</td>
+                                <td>F</td>
+                                <td>F</td>
+                                <td>T</td>
+                            </tr>
+                            <tr>
+                                <td>F</td>
+                                <td>T</td>
+                                <td>T</td>
+                                <td>T</td>
+                                <td>T</td>
+                                <td>T</td>
+                            </tr>
+                            <tr>
+                                <td>F</td>
+                                <td>F</td>
+                                <td>T</td>
+                                <td>T</td>
+                                <td>T</td>
+                                <td>T</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Karena kolom "P → Q" dan "¬P ∨ Q" memiliki nilai yang sama untuk semua kombinasi P dan Q, maka terbukti bahwa <code>P → Q ≡ ¬P ∨ Q</code>.</p>
+                </div>
+            </div>
+            
+            <div class="exercise-item">
+                <h4>Soal 7: Penerapan Database Query</h4>
+                <p>Tulis query SQL untuk mencari data mahasiswa dengan kondisi:</p>
+                <ul>
+                    <li>Jurusan = "Informatika" ATAU "Sistem Informasi"</li>
+                    <li>IPK ≥ 3.0</li>
+                    <li>Tahun masuk = 2020 ATAU 2021</li>
+                    <li>Bukan mahasiswa yang sedang cuti</li>
+                </ul>
+                <button class="answer-btn" data-answer="answer7">Tampilkan Jawaban</button>
+                <div id="answer7" class="answer-content">
+                    <p><strong>Jawaban:</strong></p>
+                    <div class="code-block">
+SELECT * FROM mahasiswa 
+WHERE (jurusan = 'Informatika' OR jurusan = 'Sistem Informasi')
+  AND ipk >= 3.0
+  AND (tahun_masuk = 2020 OR tahun_masuk = 2021)
+  AND NOT status_cuti = true;
+                    </div>
+                    <p><strong>Penjelasan:</strong></p>
+                    <ul>
+                        <li><code>OR</code> untuk memilih antara dua jurusan</li>
+                        <li><code>AND</code> untuk menggabungkan semua kondisi</li>
+                        <li><code>NOT</code> untuk mengecualikan mahasiswa yang cuti</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="exercise-item">
+                <h4>Soal 8: Sirkuit Logika</h4>
+                <p>Sebuah alarm kebakaran akan berbunyi jika:</p>
+                <ul>
+                    <li>Sensor asap mendeteksi asap, ATAU</li>
+                    <li>Sensor suhu mendeteksi suhu > 50°C DAN tombol manual ditekan</li>
+                </ul>
+                <p>Tulis ekspresi logika untuk kondisi alarm berbunyi dan buat tabel kebenarannya!</p>
+                <button class="answer-btn" data-answer="answer8">Tampilkan Jawaban</button>
+                <div id="answer8" class="answer-content">
+                    <p><strong>Jawaban:</strong></p>
+                    <p><strong>Ekspresi logika:</strong> Alarm = A ∨ (S ∧ T)<br>
+                    Dimana:<br>
+                    A = Sensor asap mendeteksi asap<br>
+                    S = Sensor suhu > 50°C<br>
+                    T = Tombol manual ditekan</p>
+                    
+                    <p><strong>Tabel Kebenaran:</strong></p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>A</th>
+                                <th>S</th>
+                                <th>T</th>
+                                <th>S ∧ T</th>
+                                <th>A ∨ (S ∧ T)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>F</td><td>F</td><td>F</td><td>F</td><td>F</td></tr>
+                            <tr><td>F</td><td>F</td><td>T</td><td>F</td><td>F</td></tr>
+                            <tr><td>F</td><td>T</td><td>F</td><td>F</td><td>F</td></tr>
+                            <tr><td>F</td><td>T</td><td>T</td><td>T</td><td>T</td></tr>
+                            <tr><td>T</td><td>F</td><td>F</td><td>F</td><td>T</td></tr>
+                            <tr><td>T</td><td>F</td><td>T</td><td>F</td><td>T</td></tr>
+                            <tr><td>T</td><td>T</td><td>F</td><td>F</td><td>T</td></tr>
+                            <tr><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td></tr>
+                        </tbody>
+                    </table>
+                    <p>Alarm akan berbunyi dalam 5 dari 8 kemungkinan kondisi.</p>
+                </div>
+            </div>
+            
+            <h3>Tips Mengerjakan Soal Logika:</h3>
+            <div class="definition-box">
+                <ol>
+                    <li><strong>Pahami definisi operator</strong> - Ingat tabel kebenaran untuk setiap operator</li>
+                    <li><strong>Gunakan tabel kebenaran</strong> untuk ekspresi kompleks</li>
+                    <li><strong>Perhatikan prioritas operator</strong> - Negasi pertama, lalu AND, lalu OR</li>
+                    <li><strong>Untuk implikasi P → Q</strong>, ingat bahwa ini hanya salah jika P benar dan Q salah</li>
+                    <li><strong>Latihan teratur</strong> - Logika butuh pembiasaan berpikir</li>
+                </ol>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="penerapan.html" class="nav-btn prev">Penerapan</a>
+                <a href="../index.html" class="nav-btn next">Beranda</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p><i class="fas fa-graduation-cap"></i> Website Materi Logika Informatika</p>
+                <p>© 2025 - Latihan Soal Logika Informatika</p>
+                <div class="footer-links">
+                    <a href="../index.html">Beranda</a> | 
+                    <a href="latihan.html">Latihan</a> | 
+                    <a href="pengenalan.html">Pengenalan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

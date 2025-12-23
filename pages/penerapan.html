@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penerapan Logika - Logika Informatika</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-brain"></i> Materi Logika Informatika</h1>
+            <p>Website pembelajaran dasar-dasar logika dalam ilmu komputer</p>
+        </div>
+    </header>
+    
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="pengenalan.html"><i class="fas fa-book"></i> Pengenalan</a></li>
+                <li><a href="proposisi.html"><i class="fas fa-question"></i> Proposisi</a></li>
+                <li><a href="operator.html"><i class="fas fa-calculator"></i> Operator Logika</a></li>
+                <li><a href="tabel-kebenaran.html"><i class="fas fa-table"></i> Tabel Kebenaran</a></li>
+                <li><a href="penerapan.html" class="active"><i class="fas fa-laptop-code"></i> Penerapan</a></li>
+                <li><a href="latihan.html"><i class="fas fa-pencil-alt"></i> Latihan</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="content-header">
+            <h2><i class="fas fa-laptop-code"></i> Penerapan Logika dalam Informatika</h2>
+            <p>Contoh penerapan logika boolean dalam berbagai bidang ilmu komputer</p>
+        </div>
+        
+        <div class="content-body">
+            <h3>1. Penerapan dalam Pemrograman</h3>
+            <p>Logika boolean secara langsung diterapkan dalam pemrograman melalui struktur kontrol dan ekspresi boolean.</p>
+            
+            <div class="example-box">
+                <h4>Kondisi If-Else</h4>
+                <div class="code-block">
+// Contoh dalam JavaScript
+let nilai = 85;
+let kehadiran = 0.8;
+
+// Operator AND (∧)
+if (nilai >= 70 && kehadiran >= 0.75) {
+    console.log("Lulus");
+} else {
+    console.log("Tidak lulus");
+}
+
+// Operator OR (∨)
+let hari = "Sabtu";
+if (hari === "Sabtu" || hari === "Minggu") {
+    console.log("Hari libur");
+} else {
+    console.log("Hari kerja");
+}
+
+// Operator NOT (¬)
+let login = false;
+if (!login) {
+    console.log("Silakan login terlebih dahulu");
+}
+                </div>
+            </div>
+            
+            <div class="example-box">
+                <h4>Loop dengan Kondisi</h4>
+                <div class="code-block">
+// Contoh dalam Python
+counter = 0
+max_count = 5
+
+# Loop while dengan kondisi AND
+while counter < max_count and counter != 3:
+    print(f"Counter: {counter}")
+    counter += 1
+
+# Kondisi dalam for loop
+for i in range(10):
+    if i % 2 == 0 and i > 0:  # Bilangan genap dan lebih dari 0
+        print(f"{i} adalah bilangan genap positif")
+                </div>
+            </div>
+            
+            <h3>2. Penerapan dalam Sirkuit Digital</h3>
+            <p>Gerbang logika adalah implementasi fisik dari operator logika boolean.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Gerbang Logika</th>
+                        <th>Simbol</th>
+                        <th>Tabel Kebenaran</th>
+                        <th>Fungsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AND</td>
+                        <td><span class="operator">∧</span></td>
+                        <td>A ∧ B</td>
+                        <td>Output 1 hanya jika semua input 1</td>
+                    </tr>
+                    <tr>
+                        <td>OR</td>
+                        <td><span class="operator">∨</span></td>
+                        <td>A ∨ B</td>
+                        <td>Output 1 jika minimal satu input 1</td>
+                    </tr>
+                    <tr>
+                        <td>NOT</td>
+                        <td><span class="operator">¬</span></td>
+                        <td>¬A</td>
+                        <td>Output kebalikan dari input</td>
+                    </tr>
+                    <tr>
+                        <td>NAND</td>
+                        <td><span class="operator">¬(A∧B)</span></td>
+                        <td>¬(A ∧ B)</td>
+                        <td>Kebalikan dari AND</td>
+                    </tr>
+                    <tr>
+                        <td>NOR</td>
+                        <td><span class="operator">¬(A∨B)</span></td>
+                        <td>¬(A ∨ B)</td>
+                        <td>Kebalikan dari OR</td>
+                    </tr>
+                    <tr>
+                        <td>XOR</td>
+                        <td><span class="operator">⊕</span></td>
+                        <td>A ⊕ B</td>
+                        <td>Output 1 jika input berbeda</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="example-box">
+                <h4>Contoh Sirkuit Half-Adder</h4>
+                <p>Half-Adder adalah sirkuit yang menjumlahkan dua bit biner:</p>
+                <ul>
+                    <li><strong>Sum (S)</strong> = A ⊕ B (XOR)</li>
+                    <li><strong>Carry (C)</strong> = A ∧ B (AND)</li>
+                </ul>
+                <p>Digunakan sebagai dasar untuk operasi aritmatika dalam CPU.</p>
+            </div>
+            
+            <h3>3. Penerapan dalam Basis Data</h3>
+            <p>Operator logika digunakan dalam query SQL untuk filtering data.</p>
+            
+            <div class="example-box">
+                <h4>Query dengan Operator Boolean</h4>
+                <div class="code-block">
+-- Mencari mahasiswa dengan nilai A dan kehadiran di atas 80%
+SELECT * FROM mahasiswa 
+WHERE nilai = 'A' AND kehadiran > 0.8;
+
+-- Mencari produk yang habis atau stok kurang dari 10
+SELECT * FROM produk 
+WHERE stok = 0 OR stok < 10;
+
+-- Mencari pengguna yang bukan admin
+SELECT * FROM users 
+WHERE NOT is_admin = true;
+
+-- Kombinasi kondisi kompleks
+SELECT * FROM orders 
+WHERE (status = 'completed' AND total > 1000000) 
+   OR (status = 'pending' AND payment_method = 'credit_card');
+                </div>
+            </div>
+            
+            <h3>4. Penerapan dalam Kecerdasan Buatan</h3>
+            
+            <div class="example-box">
+                <h4>Sistem Pakar dengan Aturan Logika</h4>
+                <p>Sistem pakar menggunakan aturan IF-THEN yang didasarkan pada logika:</p>
+                <div class="code-block">
+// Aturan untuk diagnosis penyakit
+IF (demam = true AND batuk = true AND sakit_tenggorokan = true)
+   THEN kemungkinan = "Flu"
+   
+IF ((demam = true AND ruam = true) OR (nyeri_sendi = true))
+   THEN kemungkinan = "Demam Berdarah"
+   
+IF (NOT vaksin_covid AND kontak_positif = true)
+   THEN rekomendasi = "Tes COVID-19"
+                </div>
+            </div>
+            
+            <div class="example-box">
+                <h4>Decision Tree (Pohon Keputusan)</h4>
+                <p>Algoritma machine learning yang menggunakan logika boolean untuk klasifikasi:</p>
+                <pre>
+                    Apakah suhu > 38°C?
+                    /               \
+                  Ya                Tidak
+                  /                   \
+        Apakah batuk?             Sehat
+        /         \
+      Ya          Tidak
+      /             \
+   Flu           Demam Biasa
+                </pre>
+            </div>
+            
+            <h3>5. Penerapan dalam Jaringan Komputer</h3>
+            
+            <div class="example-box">
+                <h4>Access Control Lists (ACL)</h4>
+                <p>Aturan firewall menggunakan logika boolean:</p>
+                <div class="code-block">
+# Aturan firewall
+IF (source_ip = "192.168.1.0/24" AND 
+    destination_port = 80 OR destination_port = 443) 
+   THEN ALLOW
+ELSE IF (protocol = "SSH" AND NOT source_ip = "10.0.0.0/8")
+   THEN DENY
+ELSE
+   THEN ALLOW
+                </div>
+            </div>
+            
+            <h3>6. Penerapan dalam Keamanan Sistem</h3>
+            
+            <div class="example-box">
+                <h4>Aturan Autentikasi</h4>
+                <div class="code-block">
+// Sistem autentikasi dua faktor
+function authenticate(username, password, token) {
+    // Logika autentikasi
+    let valid_username = checkUsername(username);
+    let valid_password = checkPassword(password);
+    let valid_token = checkToken(token);
+    
+    // Harus memenuhi semua kondisi
+    return valid_username && valid_password && valid_token;
+}
+
+// Aturan akses berbasis role
+function canAccess(resource, user) {
+    let hasRole = user.roles.includes(resource.requiredRole);
+    let hasPermission = user.permissions.includes(resource.permission);
+    let notExpired = !resource.isExpired;
+    
+    return hasRole && hasPermission && notExpired;
+}
+                </div>
+            </div>
+            
+            <h3>7. Contoh Real-World Application</h3>
+            
+            <div class="example-box">
+                <h4>Sistem Peringatan Banjir</h4>
+                <div class="code-block">
+// Pseudocode sistem peringatan banjir
+let curah_hujan = getRainfall(); // mm/jam
+let ketinggian_air = getWaterLevel(); // cm
+let durasi_hujan = getRainDuration(); // jam
+
+// Aturan logika untuk peringatan
+if (curah_hujan > 50 && durasi_hujan > 2) {
+    issueWarning("WASPADA HUJAN LEBAT");
+}
+
+if (ketinggian_air > 100 || (curah_hujan > 30 && ketinggian_air > 50)) {
+    issueAlert("SIAGA BANJIR");
+}
+
+if (ketinggian_air > 150 && curah_hujan > 20) {
+    issueEmergencyAlert("BAHAYA BANJIR!");
+}
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="tabel-kebenaran.html" class="nav-btn prev">Tabel Kebenaran</a>
+                <a href="latihan.html" class="nav-btn next">Latihan Soal</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p><i class="fas fa-graduation-cap"></i> Website Materi Logika Informatika</p>
+                <p>© 2025 - Materi Penerapan Logika</p>
+                <div class="footer-links">
+                    <a href="../index.html">Beranda</a> | 
+                    <a href="penerapan.html">Penerapan</a> | 
+                    <a href="latihan.html">Latihan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
