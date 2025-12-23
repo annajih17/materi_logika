@@ -474,9 +474,9 @@ footer {
     }
 }
 
-/* ========== HAMBURGER MENU - NO HTML CHANGES NEEDED ========== */
+/* ========== HAMBURGER MENU FIXES ========== */
 
-/* Hamburger Button Styles - Created by JavaScript */
+/* Hamburger Button Styles */
 .hamburger-menu-btn {
     display: none;
     background: none;
@@ -486,21 +486,22 @@ footer {
     cursor: pointer;
     padding: 10px 15px;
     margin-left: auto;
-    z-index: 1002;
+    z-index: 1003; /* Lebih tinggi dari overlay */
 }
 
 /* Mobile Navigation Styles */
 @media (max-width: 768px) {
-    /* Style for navbar container */
+    /* Navbar container */
     .navbar .container {
         display: flex;
         align-items: center;
         justify-content: space-between;
         position: relative;
         padding: 0 15px;
+        z-index: 1004; /* Lebih tinggi dari overlay */
     }
     
-    /* Hide regular nav menu on mobile initially */
+    /* Nav menu mobile */
     .nav-menu {
         position: fixed;
         top: 0;
@@ -513,21 +514,23 @@ footer {
         padding: 20px 0;
         margin: 0;
         transition: left 0.3s ease-in-out;
-        z-index: 1001;
+        z-index: 1002; /* Di bawah navbar tapi di atas overlay */
         overflow-y: auto;
     }
     
-    /* Show nav menu when active */
+    /* Active state */
     .nav-menu.mobile-active {
         left: 0;
     }
     
-    /* Show hamburger button on mobile */
+    /* Show hamburger button */
     .hamburger-menu-btn {
         display: block;
+        position: relative;
+        z-index: 1005; /* Paling tinggi */
     }
     
-    /* Nav menu items styling for mobile */
+    /* Nav items */
     .nav-menu li {
         margin: 0;
         width: 100%;
@@ -540,6 +543,8 @@ footer {
         border-left: none;
         display: flex;
         align-items: center;
+        position: relative;
+        z-index: 1002;
     }
     
     .nav-menu a:hover,
@@ -557,6 +562,8 @@ footer {
         padding: 15px 25px;
         border-bottom: 1px solid #eaeaea;
         margin-bottom: 10px;
+        position: relative;
+        z-index: 1002;
     }
     
     .mobile-menu-header h3 {
@@ -572,9 +579,11 @@ footer {
         color: #2c3e50;
         cursor: pointer;
         padding: 5px;
+        z-index: 1002;
+        position: relative;
     }
     
-    /* Mobile overlay */
+    /* OVERLAY - Perbaikan utama: tidak menutupi navbar */
     .mobile-nav-overlay {
         display: none;
         position: fixed;
@@ -583,19 +592,26 @@ footer {
         right: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1000;
+        z-index: 1001; /* Di bawah navbar dan menu */
     }
     
     .mobile-nav-overlay.active {
         display: block;
     }
     
-    /* Adjust main content when menu is open */
+    /* Body ketika menu terbuka */
     body.mobile-nav-open {
         overflow: hidden;
     }
     
-    /* Improve spacing for mobile */
+    /* Pastikan navbar tetap di atas overlay */
+    .navbar {
+        position: relative;
+        z-index: 1004;
+        background-color: white; /* Background solid */
+    }
+    
+    /* Icons */
     .nav-menu i {
         width: 20px;
         text-align: center;
@@ -632,7 +648,7 @@ footer {
     bottom: -8px;
 }
 
-/* Transform hamburger to X when active */
+/* Transform hamburger to X */
 .hamburger-menu-btn.active .hamburger-icon {
     background-color: transparent;
 }
@@ -647,7 +663,7 @@ footer {
     bottom: 0;
 }
 
-/* Responsive adjustments for smaller screens */
+/* Responsive */
 @media (max-width: 480px) {
     .nav-menu {
         width: 85%;
@@ -663,10 +679,10 @@ footer {
     }
 }
 
-/* Ensure desktop menu stays visible on larger screens */
+/* Desktop */
 @media (min-width: 769px) {
     .nav-menu {
-        display: flex !important; /* Force display on desktop */
+        display: flex !important;
         position: static !important;
         width: auto !important;
         height: auto !important;
